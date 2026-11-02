@@ -1,3 +1,216 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Next Level Gaming and Esports Arena in Johannesburg. Browse packages and calculate a booking quotation."><meta name="theme-color" content="#000000"><title>Sign in / Sign up | Next Level</title><link rel="icon" href="assets/images/logo.jpg"><link rel="stylesheet" href="assets/css/style.css"><script src="assets/js/data.js" defer></script><script src="assets/js/app.js" defer></script></head>
-<body data-page="account" data-protected="false"><a class="skip" href="#main">Skip to content</a><header class="topbar"><a href="index.html" aria-label="Next Level overview" class="dots"><i></i><i></i><i></i></a><div class="page-label">Sign in / Sign up</div><div class="top-actions" id="account-nav"><a class="btn small" href="account.html#signin">Sign in</a><a class="btn primary small" href="account.html#signup">Sign up</a></div></header><noscript><div class="noscript">Enable JavaScript for the demo account, booking forms and calculator. You can still browse the information pages.</div></noscript><main id="main" class="page"><a class="back" href="home.html"><span class="circle"><svg class="icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 15 L16 4 L28 15 M7 13 V29 H25 V13 M13 29 V20 H20 V29"/></svg></span><span>Home</span></a><div class="heading"><h1>YOUR NEXT LEVEL STARTS HERE</h1><p class="eyebrow">Sign in or create a demo profile</p></div><div class="auth-card"><p class="notice">Classroom demonstration only. Use sample details and a made-up password. No real account is created and passwords are never stored.</p><div class="tabs" role="tablist" aria-label="Account options"><button id="signin-tab" type="button" role="tab" aria-controls="signin-panel" aria-selected="true">Sign in</button><button id="signup-tab" type="button" role="tab" aria-controls="signup-panel" aria-selected="false" tabindex="-1">Sign up</button></div><section id="signin-panel" role="tabpanel" aria-labelledby="signin-tab"><form id="signin-form" novalidate><h2>Welcome back</h2><div class="field"><label for="signin-email">Email address</label><input id="signin-email" name="signin-email" type="email" required autocomplete="off" value="player@example.com"><p class="error" id="signin-email-error"></p></div><div class="field"><label for="signin-password">Demo password (at least 6 characters)</label><input id="signin-password" name="signin-password" type="password" required minlength="6" autocomplete="off" value="player123"><p class="error" id="signin-password-error"></p></div><p class="help">For the demo, any valid sample email and a password of 6 or more characters will work.</p><button class="btn primary wide-btn" type="submit">Sign in</button></form></section><section id="signup-panel" role="tabpanel" aria-labelledby="signup-tab" hidden><form id="signup-form" novalidate><h2>Create a demo profile</h2><div class="field"><label for="first-name">Name</label><input id="first-name" name="first-name" type="text" required maxlength="50" autocomplete="off"><p class="error" id="first-name-error"></p></div><div class="field"><label for="surname">Surname</label><input id="surname" name="surname" type="text" required maxlength="50" autocomplete="off"><p class="error" id="surname-error"></p></div><div class="field"><label for="signup-email">Email address</label><input id="signup-email" name="signup-email" type="email" required autocomplete="off"><p class="error" id="signup-email-error"></p></div><div class="field"><label for="signup-phone">Number</label><input id="signup-phone" name="signup-phone" type="tel" required autocomplete="off"><p class="error" id="signup-phone-error"></p></div><div class="field"><label for="signup-password">Password (at least 6 characters)</label><input id="signup-password" name="signup-password" type="password" required minlength="6" autocomplete="off"><p class="error" id="signup-password-error"></p></div><div class="field"><label for="confirm-password">Reconfirm password</label><input id="confirm-password" name="confirm-password" type="password" required minlength="6" autocomplete="off"><p class="error" id="confirm-password-error"></p></div><button class="btn primary wide-btn" type="submit">Sign up</button></form></section><p class="error" id="storage-error" role="alert"></p></div></main><footer class="footer"><a href="index.html"><strong>NEXT LEVEL</strong><small>Gaming &amp; Esports Arena</small></a><nav aria-label="Footer navigation"><a href="about.html">About us</a><a href="my-bookings.html">My bookings</a><a href="contact.html">Contact us</a><a href="faq.html">FAQ</a></nav><p class="footer-note">Student project demonstration · No live reservations or real payments.</p></footer></body></html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta
+      name="description"
+      content="Next Level Gaming and Esports Arena in Johannesburg. Browse packages and calculate a booking quotation."
+    >
+    <meta name="theme-color" content="#000000">
+
+    <title>Sign in / Sign up | Next Level</title>
+
+    <link rel="icon" href="assets/images/logo.jpg">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="assets/js/data.js" defer></script>
+    <script src="assets/js/app.js" defer></script>
+  </head>
+
+  <body data-page="account" data-protected="false">
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="topbar">
+      <a href="index.html" aria-label="Next Level overview" class="dots">
+        <i></i><i></i><i></i>
+      </a>
+
+      <div class="page-label">Sign in / Sign up</div>
+
+      <div class="top-actions" id="account-nav">
+        <a class="btn small" href="account.html#signin">Sign in</a>
+        <a class="btn primary small" href="account.html#signup">Sign up</a>
+      </div>
+    </header>
+
+    <noscript>
+      <div class="noscript">Enable JavaScript for the demo account, booking forms and calculator. You can still browse the information pages.</div>
+    </noscript>
+
+    <main id="main" class="page">
+      <a class="back" href="home.html">
+        <span class="circle">
+          <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M4 15 L16 4 L28 15 M7 13 V29 H25 V13 M13 29 V20 H20 V29"/>
+          </svg>
+        </span>
+        <span>Home</span>
+      </a>
+
+      <div class="heading">
+        <h1>YOUR NEXT LEVEL STARTS HERE</h1>
+        <p class="eyebrow">Sign in or create a demo profile</p>
+      </div>
+
+      <div class="auth-card">
+        <p class="notice">Classroom demonstration only. Use sample details and a made-up password. No real account is created and passwords are never stored.</p>
+
+        <div class="tabs" role="tablist" aria-label="Account options">
+          <button
+            id="signin-tab"
+            type="button"
+            role="tab"
+            aria-controls="signin-panel"
+            aria-selected="true"
+          >Sign in</button>
+          <button
+            id="signup-tab"
+            type="button"
+            role="tab"
+            aria-controls="signup-panel"
+            aria-selected="false"
+            tabindex="-1"
+          >Sign up</button>
+        </div>
+
+        <section id="signin-panel" role="tabpanel" aria-labelledby="signin-tab">
+          <form id="signin-form" novalidate>
+            <h2>Welcome back</h2>
+
+            <div class="field">
+              <label for="signin-email">Email address</label>
+              <input
+                id="signin-email"
+                name="signin-email"
+                type="email"
+                required
+                autocomplete="off"
+                value="player@example.com"
+              >
+              <p class="error" id="signin-email-error"></p>
+            </div>
+
+            <div class="field">
+              <label for="signin-password">Demo password (at least 6 characters)</label>
+              <input
+                id="signin-password"
+                name="signin-password"
+                type="password"
+                required
+                minlength="6"
+                autocomplete="off"
+                value="player123"
+              >
+              <p class="error" id="signin-password-error"></p>
+            </div>
+
+            <p class="help">For the demo, any valid sample email and a password of 6 or more characters will work.</p>
+            <button class="btn primary wide-btn" type="submit">Sign in</button>
+          </form>
+        </section>
+
+        <section id="signup-panel" role="tabpanel" aria-labelledby="signup-tab" hidden>
+          <form id="signup-form" novalidate>
+            <h2>Create a demo profile</h2>
+
+            <div class="field">
+              <label for="first-name">Name</label>
+              <input
+                id="first-name"
+                name="first-name"
+                type="text"
+                required
+                maxlength="50"
+                autocomplete="off"
+              >
+              <p class="error" id="first-name-error"></p>
+            </div>
+
+            <div class="field">
+              <label for="surname">Surname</label>
+              <input
+                id="surname"
+                name="surname"
+                type="text"
+                required
+                maxlength="50"
+                autocomplete="off"
+              >
+              <p class="error" id="surname-error"></p>
+            </div>
+
+            <div class="field">
+              <label for="signup-email">Email address</label>
+              <input
+                id="signup-email"
+                name="signup-email"
+                type="email"
+                required
+                autocomplete="off"
+              >
+              <p class="error" id="signup-email-error"></p>
+            </div>
+
+            <div class="field">
+              <label for="signup-phone">Number</label>
+              <input
+                id="signup-phone"
+                name="signup-phone"
+                type="tel"
+                required
+                autocomplete="off"
+              >
+              <p class="error" id="signup-phone-error"></p>
+            </div>
+
+            <div class="field">
+              <label for="signup-password">Password (at least 6 characters)</label>
+              <input
+                id="signup-password"
+                name="signup-password"
+                type="password"
+                required
+                minlength="6"
+                autocomplete="off"
+              >
+              <p class="error" id="signup-password-error"></p>
+            </div>
+
+            <div class="field">
+              <label for="confirm-password">Reconfirm password</label>
+              <input
+                id="confirm-password"
+                name="confirm-password"
+                type="password"
+                required
+                minlength="6"
+                autocomplete="off"
+              >
+              <p class="error" id="confirm-password-error"></p>
+            </div>
+
+            <button class="btn primary wide-btn" type="submit">Sign up</button>
+          </form>
+        </section>
+
+        <p class="error" id="storage-error" role="alert"></p>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <a href="index.html">
+        <strong>NEXT LEVEL</strong><small>Gaming &amp; Esports Arena</small>
+      </a>
+
+      <nav aria-label="Footer navigation">
+        <a href="about.html">About us</a>
+        <a href="my-bookings.html">My bookings</a>
+        <a href="contact.html">Contact us</a>
+        <a href="faq.html">FAQ</a>
+      </nav>
+
+      <p class="footer-note">Student project demonstration · No live reservations or real payments.</p>
+    </footer>
+  </body>
+</html>
