@@ -1,3 +1,205 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Next Level Gaming and Esports Arena in Johannesburg. Browse packages and calculate a booking quotation."><meta name="theme-color" content="#000000"><title>Calculate fees / Checkout | Next Level</title><link rel="icon" href="assets/images/logo.jpg"><link rel="stylesheet" href="assets/css/style.css"><script src="assets/js/data.js" defer></script><script src="assets/js/app.js" defer></script></head>
-<body data-page="fees" data-protected="true"><a class="skip" href="#main">Skip to content</a><header class="topbar"><a href="index.html" aria-label="Next Level overview" class="dots"><i></i><i></i><i></i></a><div class="page-label">Calculate fees / Checkout</div><div class="top-actions" id="account-nav"><a class="btn small" href="account.html#signin">Sign in</a><a class="btn primary small" href="account.html#signup">Sign up</a></div></header><noscript><div class="noscript">Enable JavaScript for the demo account, booking forms and calculator. You can still browse the information pages.</div></noscript><main id="main" class="page"><div class="fee-heading"><img class="" src="assets/images/logo.jpg" alt="Next Level logo"><a class="back" href="home.html"><span class="circle"><svg class="icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 15 L16 4 L28 15 M7 13 V29 H25 V13 M13 29 V20 H20 V29"/></svg></span><span>Home</span></a></div><div class="heading"><h1>CALCULATE TOTAL FEES</h1><p class="eyebrow">Select one or more items. A consultant will confirm your booking.</p></div><form class="fee-form" id="fees-form" novalidate><div class="form-grid"><div class="field"><label for="customer-name">Name</label><input id="customer-name" name="customer-name" type="text" required maxlength="100"><p class="error" id="customer-name-error"></p></div><div class="field"><label for="customer-phone">Phone number</label><input id="customer-phone" name="customer-phone" type="tel" required><p class="error" id="customer-phone-error"></p></div><div class="field"><label for="customer-email">Email address</label><input id="customer-email" name="customer-email" type="email" required><p class="error" id="customer-email-error"></p></div><div class="field"><label for="contact-method">Preferred contact</label><select id="contact-method" name="contact-method"><option value="Email">Email</option><option value="Phone">Phone</option></select></div></div><fieldset class="selection-list"><legend>Select packages &amp; experiences</legend><label class="choice" for="item-ultimate"><input type="checkbox" id="item-ultimate" name="items" value="ultimate"><span>Ultimate Gamer Pass</span><span class="item-price">R1,500</span></label><label class="choice" for="item-vip"><input type="checkbox" id="item-vip" name="items" value="vip"><span>VIP Gaming Experience</span><span class="item-price">R1,500</span></label><label class="choice" for="item-training"><input type="checkbox" id="item-training" name="items" value="training"><span>Esports Training Package</span><span class="item-price">R1,500</span></label><label class="choice" for="item-birthday"><input type="checkbox" id="item-birthday" name="items" value="birthday"><span>Birthday Party Package</span><span class="item-price">R1,500</span></label><label class="choice" for="item-vr"><input type="checkbox" id="item-vr" name="items" value="vr"><span>Virtual Reality Experience</span><span class="item-price">R750</span></label><label class="choice" for="item-racing"><input type="checkbox" id="item-racing" name="items" value="racing"><span>Racing Simulator Challenge</span><span class="item-price">R750</span></label><label class="choice" for="item-escape"><input type="checkbox" id="item-escape" name="items" value="escape"><span>Escape Room Challenge</span><span class="item-price">R750</span></label></fieldset><p id="selection-error" class="error" role="alert"></p><div class="center"><button type="submit" class="btn primary wide-btn">Calculate total</button></div></form><div class="discounts" aria-label="Booking discount tiers"><div data-tier="0"><strong>1 booking</strong><small>No discount</small></div><div data-tier="5"><strong>2 bookings</strong><small>5% discount</small></div><div data-tier="10"><strong>3 bookings</strong><small>10% discount</small></div><div data-tier="15"><strong>4+ bookings</strong><small>15% discount</small></div></div><section id="quote-section" hidden aria-labelledby="quote-heading"><h2 id="quote-heading" tabindex="-1">Your quotation</h2><div class="table-wrap"><table><caption class="help">Selected items, discount and VAT</caption><thead><tr><th scope="col">Selected items</th><th scope="col">Amount</th></tr></thead><tbody id="quote-items"></tbody><tfoot id="quote-totals"></tfoot></table></div><p class="center">This is a quotation, not a final invoice. Requesting a callback does not take a payment.</p><div class="checkout-actions"><button class="btn primary" type="button" id="request-booking">Request consultant callback</button><button class="btn" type="button" id="demo-payment">Simulate payment</button></div><p class="help center">Payment simulation is included for your project demonstration only. No card details are collected.</p></section><p id="quote-status" role="status" class="status center"></p></main><footer class="footer"><a href="index.html"><strong>NEXT LEVEL</strong><small>Gaming &amp; Esports Arena</small></a><nav aria-label="Footer navigation"><a href="about.html">About us</a><a href="my-bookings.html">My bookings</a><a href="contact.html">Contact us</a><a href="faq.html">FAQ</a></nav><p class="footer-note">Student project demonstration · No live reservations or real payments.</p></footer></body></html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta
+      name="description"
+      content="Next Level Gaming and Esports Arena in Johannesburg. Browse packages and calculate a booking quotation."
+    >
+    <meta name="theme-color" content="#000000">
+
+    <title>Calculate fees / Checkout | Next Level</title>
+
+    <link rel="icon" href="assets/images/logo.jpg">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="assets/js/data.js" defer></script>
+    <script src="assets/js/app.js" defer></script>
+  </head>
+
+  <body data-page="fees" data-protected="true">
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="topbar">
+      <a href="index.html" aria-label="Next Level overview" class="dots">
+        <i></i><i></i><i></i>
+      </a>
+
+      <div class="page-label">Calculate fees / Checkout</div>
+
+      <div class="top-actions" id="account-nav">
+        <a class="btn small" href="account.html#signin">Sign in</a>
+        <a class="btn primary small" href="account.html#signup">Sign up</a>
+      </div>
+    </header>
+
+    <noscript>
+      <div class="noscript">Enable JavaScript for the demo account, booking forms and calculator. You can still browse the information pages.</div>
+    </noscript>
+
+    <main id="main" class="page">
+      <div class="fee-heading">
+        <img class="" src="assets/images/logo.jpg" alt="Next Level logo">
+
+        <a class="back" href="home.html">
+          <span class="circle">
+            <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
+              <path d="M4 15 L16 4 L28 15 M7 13 V29 H25 V13 M13 29 V20 H20 V29"/>
+            </svg>
+          </span>
+          <span>Home</span>
+        </a>
+      </div>
+
+      <div class="heading">
+        <h1>CALCULATE TOTAL FEES</h1>
+        <p class="eyebrow">Select one or more items. A consultant will confirm your booking.</p>
+      </div>
+
+      <form class="fee-form" id="fees-form" novalidate>
+        <div class="form-grid">
+          <div class="field">
+            <label for="customer-name">Name</label>
+            <input id="customer-name" name="customer-name" type="text" required maxlength="100">
+            <p class="error" id="customer-name-error"></p>
+          </div>
+
+          <div class="field">
+            <label for="customer-phone">Phone number</label>
+            <input id="customer-phone" name="customer-phone" type="tel" required>
+            <p class="error" id="customer-phone-error"></p>
+          </div>
+
+          <div class="field">
+            <label for="customer-email">Email address</label>
+            <input id="customer-email" name="customer-email" type="email" required>
+            <p class="error" id="customer-email-error"></p>
+          </div>
+
+          <div class="field">
+            <label for="contact-method">Preferred contact</label>
+            <select id="contact-method" name="contact-method">
+              <option value="Email">Email</option>
+              <option value="Phone">Phone</option>
+            </select>
+          </div>
+        </div>
+
+        <fieldset class="selection-list">
+          <legend>Select packages &amp; experiences</legend>
+
+          <label class="choice" for="item-ultimate">
+            <input type="checkbox" id="item-ultimate" name="items" value="ultimate">
+            <span>Ultimate Gamer Pass</span>
+            <span class="item-price">R1,500</span>
+          </label>
+
+          <label class="choice" for="item-vip">
+            <input type="checkbox" id="item-vip" name="items" value="vip">
+            <span>VIP Gaming Experience</span>
+            <span class="item-price">R1,500</span>
+          </label>
+
+          <label class="choice" for="item-training">
+            <input type="checkbox" id="item-training" name="items" value="training">
+            <span>Esports Training Package</span>
+            <span class="item-price">R1,500</span>
+          </label>
+
+          <label class="choice" for="item-birthday">
+            <input type="checkbox" id="item-birthday" name="items" value="birthday">
+            <span>Birthday Party Package</span>
+            <span class="item-price">R1,500</span>
+          </label>
+
+          <label class="choice" for="item-vr">
+            <input type="checkbox" id="item-vr" name="items" value="vr">
+            <span>Virtual Reality Experience</span>
+            <span class="item-price">R750</span>
+          </label>
+
+          <label class="choice" for="item-racing">
+            <input type="checkbox" id="item-racing" name="items" value="racing">
+            <span>Racing Simulator Challenge</span>
+            <span class="item-price">R750</span>
+          </label>
+
+          <label class="choice" for="item-escape">
+            <input type="checkbox" id="item-escape" name="items" value="escape">
+            <span>Escape Room Challenge</span>
+            <span class="item-price">R750</span>
+          </label>
+        </fieldset>
+
+        <p id="selection-error" class="error" role="alert"></p>
+
+        <div class="center">
+          <button type="submit" class="btn primary wide-btn">Calculate total</button>
+        </div>
+      </form>
+
+      <div class="discounts" aria-label="Booking discount tiers">
+        <div data-tier="0">
+          <strong>1 booking</strong><small>No discount</small>
+        </div>
+
+        <div data-tier="5">
+          <strong>2 bookings</strong><small>5% discount</small>
+        </div>
+
+        <div data-tier="10">
+          <strong>3 bookings</strong><small>10% discount</small>
+        </div>
+
+        <div data-tier="15">
+          <strong>4+ bookings</strong><small>15% discount</small>
+        </div>
+      </div>
+
+      <section id="quote-section" hidden aria-labelledby="quote-heading">
+        <h2 id="quote-heading" tabindex="-1">Your quotation</h2>
+
+        <div class="table-wrap">
+          <table>
+            <caption class="help">Selected items, discount and VAT</caption>
+            <thead>
+              <tr>
+                <th scope="col">Selected items</th>
+                <th scope="col">Amount</th>
+              </tr>
+            </thead>
+            <tbody id="quote-items"></tbody>
+            <tfoot id="quote-totals"></tfoot>
+          </table>
+        </div>
+
+        <p class="center">This is a quotation, not a final invoice. Requesting a callback does not take a payment.</p>
+
+        <div class="checkout-actions">
+          <button class="btn primary" type="button" id="request-booking">Request consultant callback</button>
+          <button class="btn" type="button" id="demo-payment">Simulate payment</button>
+        </div>
+
+        <p class="help center">Payment simulation is included for your project demonstration only. No card details are collected.</p>
+      </section>
+
+      <p id="quote-status" role="status" class="status center"></p>
+    </main>
+
+    <footer class="footer">
+      <a href="index.html">
+        <strong>NEXT LEVEL</strong><small>Gaming &amp; Esports Arena</small>
+      </a>
+
+      <nav aria-label="Footer navigation">
+        <a href="about.html">About us</a>
+        <a href="my-bookings.html">My bookings</a>
+        <a href="contact.html">Contact us</a>
+        <a href="faq.html">FAQ</a>
+      </nav>
+
+      <p class="footer-note">Student project demonstration · No live reservations or real payments.</p>
+    </footer>
+  </body>
+</html>
